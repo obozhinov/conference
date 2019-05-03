@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Navigation from "./Components/Navigation";
+import { BrowserRouter } from "react-router-dom";
+import Hero from "./Components/Hero";
+import Program from "./Components/Program";
+import Srokove from "./Components/Srokove";
+import Conference from "./Components/Conference";
+import Organizator from "./Components/Organizator";
+import Rules from "./Components/Rules";
+import Opinions from "./Components/Opinions";
+import SubscribeForm from "./Components/SubscribeForm";
+import Footer from "./Components/Footer";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <Navigation />
+        <Hero />
+        <Program />
+        <Srokove />
+        <Conference />
+        <Organizator />
+        <Opinions />
+        <Rules />
+        <SubscribeForm />
+        <Footer />
+      </BrowserRouter>
     );
   }
 }
